@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\TD_ET\\Leetcode\\LeetCode\\LeetCode\\LeetCode.csproj": {}
+  },
+  "projects": {
+    "D:\\TD_ET\\Leetcode\\LeetCode\\LeetCode\\LeetCode.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\TD_ET\\Leetcode\\LeetCode\\LeetCode\\LeetCode.csproj",
+        "projectName": "LeetCode",
+        "projectPath": "D:\\TD_ET\\Leetcode\\LeetCode\\LeetCode\\LeetCode.csproj",
+        "packagesPath": "C:\\Users\\mac\\.nuget\\packages\\",
+        "outputPath": "D:\\TD_ET\\Leetcode\\LeetCode\\LeetCode\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
