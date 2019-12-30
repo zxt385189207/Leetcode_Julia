@@ -18,10 +18,14 @@
           <e p="1两数之和" t="Include">
             <e p="Algorithms.cs" t="Include" />
           </e>
-          <e p="2两数相加" t="Include">
+          <e p="3无重复字符的最长子串" t="Include">
+            <e p="Algorithms.cs" t="Include" />
+          </e>
+          <e p="7整数反转" t="Include">
             <e p="Algorithms.cs" t="Include" />
           </e>
         </e>
+        <e p="dic.cs" t="Include" />
         <e p="LeetCode.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
