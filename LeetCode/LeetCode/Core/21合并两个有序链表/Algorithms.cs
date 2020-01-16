@@ -1,36 +1,20 @@
 /*
- * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
+ * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
 
-有效字符串需满足：
+示例：
 
-左括号必须用相同类型的右括号闭合。
-左括号必须以正确的顺序闭合。
-注意空字符串可被认为是有效字符串。
-
-示例 1:
-
-输入: "()"
-输出: true
-示例 2:
-
-输入: "()[]{}"
-输出: true
-示例 3:
-
-输入: "(]"
-输出: false
-示例 4:
-
-输入: "([)]"
-输出: false
-示例 5:
-
-输入: "{[]}"
-输出: true
+输入：1->2->4, 1->3->4
+输出：1->1->2->3->4->4
 
 来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/valid-parentheses
+链接：https://leetcode-cn.com/problems/merge-two-sorted-lists
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     public ListNode(int x) { val = x; }
  */
 
 using System;
@@ -39,111 +23,99 @@ using System.Text;
 
 namespace LeetCode.Core
 {
-    public partial class Algorithms
+    public class ListNode
     {
-        /// <summary>
-        /// 用栈配对
-        /// </summary>
-        /// <param name="s"></param>
-        /// <returns></returns>
-        public bool isValid(String s)
+        public int      val;
+        public ListNode next;
+
+        public ListNode(int x)
         {
-            // 用栈保存 (，[，{
-            Stack<char> stack = new Stack<char>();
-
-            // dic中保存的是 ):(, ]:[,}:{
-            // 当遍历到 )时候就会去dic中找对应的value，也就是(
-            // 再用这个value和stack弹出的元素比较，如果相等则匹配上，不等则返回false
-            Dictionary<char, char> dic = new Dictionary<char, char>
-            {
-                {')', '('},
-                {']', '['},
-                {'}', '{'}
-            };
-            char[] c = s.ToCharArray();
-
-            for (int i = 0; i < c.Length; i++)
-            {
-                // 如果字符是 ( [ { 就放入栈
-                if (!dic.ContainsKey(c[i]))
-                {
-                    stack.Push(c[i]);
-                }
-                else // 字符是) ] }
-                {
-                    if (stack.Count == 0)
-                    {
-                        return false;
-                    }
-
-                    // 取出栈顶的元素
-                    char temp = stack.Pop();
-                    // 比较字符和dic中的对应值, 是否匹配
-                    if (dic[c[i]] != temp)
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            //返回的时候还要判断栈是否为空
-            //如果输入的字符串是 (((，那么最后栈就不为空
-            return stack.Count == 0;
+            val = x;
         }
 
         /// <summary>
-        /// 字符串replace,消消乐方式.
-        /// 超时
+        /// 递归,
+        /// 特殊的，如果 l1 或者 l2 一开始就是 null ，那么没有任何操作需要合并，所以我们只需要返回非空链表。
+        /// 否则，我们要判断 l1 和 l2 哪一个的头元素更小，
+        /// 然后递归地决定下一个添加到结果里的值。
+        /// 如果两个链表都是空的，那么过程终止，所以递归过程最终一定会终止。
         /// </summary>
-        /// <param name="s"></param>
-        /// <returns></returns>
-        public bool isValid2(String s)
+        public partial class Algorithms
         {
-            StringBuilder sb = new StringBuilder(s);
-
-            while (s.Contains("()") || s.Contains("[]") || s.Contains("{}"))
+            public ListNode MergeTwoLists(ListNode l1, ListNode l2)
             {
-                //假设输入的字符是((()))，第一次替换完字符串就变成了(())
-                //第二次替换变成()，第三次就是""
-                if (s.Contains("()"))
+                if (l1 == null)
                 {
-                    sb.Replace(@"()", "");
+                    return l2;
                 }
-
-                //对于嵌套包含也是一样，([{}])
-                //第一次会被替换成([])，第二次替换成()，第三次是""
-                if (s.Contains("[]"))
+                else if (l2 == null)
                 {
-                    sb.Replace(@"[]", "");
+                    return l1;
                 }
-
-                if (s.Contains("{}"))
+                else if (l1.val < l2.val)
                 {
-                    sb.Replace(@"()", "");
+                    l1.next = MergeTwoLists(l1.next, l2);
+                    return l1;
                 }
-
-                s = sb.ToString();
+                else
+                {
+                    l2.next = MergeTwoLists(l1, l2.next);
+                    return l2;
+                }
             }
 
-            return "".Equals(s);
-        } 
-        
 
-        /// <summary>
-        /// 递归,执行很慢
-        /// </summary>
-        /// <param name="s"></param>
-        /// <returns></returns>
-        public bool isValid3(String s)
-        {
-            if (s.Contains("()") || s.Contains("[]") || s.Contains("{}") || s.Contains(" "))
+            
+            /*
+             * --------------------------------------------------
+             *                  1    4  → 5    null
+             *  prehead -1  ↗  ↓      ↖   ↘
+             *                  1  → 2  → 3    6 → null
+             *  最终返回prehead.next
+             * --------------------------------------------------
+             * 
+             */
+            /// <summary>
+            /// 迭代
+            /// </summary>
+            /// <param name="l1"></param>
+            /// <param name="l2"></param>
+            /// <returns></returns>
+            public ListNode MergeTwoLists2(ListNode l1, ListNode l2)
             {
-                string news = s.Replace("()", "").Replace("[]", "").Replace("{}", "").Replace(" ", "");
-                return isValid3(news);
-            }
-            else
-            {
-                return s.Length > 0 ? false : true;
+                //在返回节点之前维护对节点的不变引用。
+                // 我们设定一个哨兵节点 "prehead" ，
+                // 这可以在最后让我们比较容易地返回合并后的链表。
+                ListNode prehead = new ListNode(-1);
+                // 我们维护一个 prev 指针，我们需要做的是调整它的 next 指针
+                ListNode prev = prehead;
+                
+                // 我们重复以下过程，直到 l1 或者 l2 指向了 null ：
+                // 如果 l1 当前位置的值小于等于 l2 ，
+                // 我们就把 l1 的值接在 prev 节点的后面同时将 l1 指针往后移一个。
+                // 否则，我们对 l2 做同样的操作。
+                // 不管我们将哪一个元素接在了后面，我们都把 prev 向后移一个元素。
+                while (l1 != null && l2 != null)
+                {
+                    if (l1.val <= l2.val)
+                    {
+                        prev.next = l1;
+                        l1        = l1.next;
+                    }
+                    else
+                    {
+                        prev.next = l2;
+                        l2        = l2.next;
+                    }
+
+                    prev = prev.next;
+                }
+
+                // exactly one of l1 and l2 can be non-null at this point, so connect
+                // the non-null list to the end of the merged list.
+                prev.next = l1 == null ? l2 : l1;
+
+                return prehead.next;
             }
         }
     }

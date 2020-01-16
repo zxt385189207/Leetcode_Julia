@@ -7,13 +7,13 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using LeetCode.Core;
 
+
 namespace LeetCode
 {
     class Program
     {
-        
-        
-        
+      
+
         static void Main(string[] args)
         {
             Algorithms a = new Algorithms();
@@ -21,28 +21,12 @@ namespace LeetCode
             //Console.WriteLine(a.LengthOfLongestSubstring2("abcda"));
             // int[] aa = new[] {-2,1,-3,4,-1,2,1,-5,4};
             //
-            a.MySqrt1(8);
-
-
-
-            // Boolean? btrue = true;
-            // Boolean? bfalse = false;
-            // Boolean? bnull = null;
-            //
-            // Int32? i = null;
-            // Int32? j = 1;
-            //
-            // Boolean? bnull1 = btrue & bnull;
-            //
-            // Console.WriteLine(bnull1);
-            //
-
-
-
-
-
-
-
+            //a.MySqrt1(8);
+            // [1,2,3,3,4,4,5]
+            int i = Int32.MaxValue;
+            Console.WriteLine(i);
+            Console.WriteLine(++i);
+            Console.WriteLine(++i);
 
             // Stopwatch stopwatch = new Stopwatch();
             //
