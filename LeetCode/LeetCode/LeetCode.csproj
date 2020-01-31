@@ -6,14 +6,21 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Common" />
-      <Folder Include="初级算法\字符串" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Content Include="..\..\README.md">
         <Link>README.md</Link>
       </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="队列和栈\279. 完全平方数\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="队列和栈\279. 完全平方数\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="队列和栈\279. 完全平方数\**" />
     </ItemGroup>
 
 </Project>

@@ -5,28 +5,26 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
-using LeetCode.Core;
 
 
 namespace LeetCode
 {
+    
+    
+    
+    
     class Program
     {
-      
-
         static void Main(string[] args)
         {
-            Algorithms a = new Algorithms();
             //
             //Console.WriteLine(a.LengthOfLongestSubstring2("abcda"));
             // int[] aa = new[] {-2,1,-3,4,-1,2,1,-5,4};
             //
-            //a.MySqrt1(8);
-            // [1,2,3,3,4,4,5]
-            int i = Int32.MaxValue;
-            Console.WriteLine(i);
-            Console.WriteLine(++i);
-            Console.WriteLine(++i);
+
+            // ListNode b = new ListNode(1);
+            // a.RemoveNthFromEnd(b,1);
+
 
             // Stopwatch stopwatch = new Stopwatch();
             //

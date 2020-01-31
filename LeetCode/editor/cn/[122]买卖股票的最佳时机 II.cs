@@ -31,8 +31,30 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
-    public int MaxProfit(int[] prices) {
+    // 股票买卖策略
+    // 单独交易日: 今天价格p1,明天价格p2, 明天卖出可赚取的金额p2-p1
+    // 连续上涨交易日股票价格为p1,p2,p3...pn, 则第一天买入到最后一天卖出收益最大.
+    //   即 pn - p1 等价于 (p2 - p1) + (p3 - p2) ... (pn - pn-1)
+    // 连续下降交易日: 则不买卖收益最大，即不会亏钱。
+    //
+    // 可以当天买和当天卖
+    public int MaxProfit(int[] prices)
+    {
+        // 收益
+        var profit = 0;
+            
+        for (int i = 1; i < prices.Length; i++)
+        {
+            // 第二天价格和第一天价格的对比
+            int temp = prices[i] - prices[i - 1];
+            // >0代表赚钱,计算第一天买入,第二天卖出得到的收益
+            if (temp > 0)
+            {
+                profit += temp;
+            }
+        }
 
+        return profit;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

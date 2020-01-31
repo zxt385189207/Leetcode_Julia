@@ -35,32 +35,83 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
-    public string CountAndSay(int n) {
-                    string str, res;
-                    // 起始数列
-                    res = "1";
-                    for (int i = 1; i < n; i++)
+         /// <summary>
+        /// 迭代,  使用StringBuilder能减少操作string字符串带来的损耗
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public string CountAndSay(int n)
+        {
+            StringBuilder str, res;
+            //string str, res;
+            // 起始数列
+            //res = "1";
+            res = new StringBuilder("1");
+
+            for (int i = 1; i < n; i++)
+            {
+                // 赋值上一个数列
+                str = new StringBuilder(res.ToString());
+                //res = "";
+                res.Clear();
+
+                for (int j = 0; j < str.Length;) // 这里没有进行j的递增
+                {
+                    int c = 0, k = j;
+                    // 比较字符是否相等
+                    while (k < str.Length && str[k] == str[j])
                     {
-                        // 赋值上一个数列
-                        str = res;
-                        res = "";
-                        for (int j = 0; j < str.Length;) // 这里没有进行j的递增
-                        {
-                            int c = 0, k = j;
-                            // 比较字符是否相等
-                            while (k < str.Length && str[k] == str[j])
-                            {
-                                k++;
-                                c++;
-                            }
-                            // c是个数, str[j]是值
-                            res += c.ToString() + str[j];
-                            // 跳过连续重复的数字,
-                            j   =  k;
-                        }
+                        k++;
+                        c++;
                     }
-        
-                    return res;
-    }
+
+                    // c是个数, str[j]是值
+                    res.Append(c.ToString());
+                    res.Append(str[j]);
+                    // 跳过连续重复的数字,
+                    j = k;
+                }
+            }
+
+            return res.ToString();
+        }
+
+        // 打表的方式, O(1), 速度最快
+        // public string CountAndSay2(int n)
+        // {
+        // switch (n)
+        // {
+        //     case 1: return "1";
+        //     case 2: return "11";
+        //     case 3:
+        //         return "21";
+        //     case 4:
+        //         return "1211";
+        //     case 5:
+        //         return "111221";
+        //     case 6:
+        //         return "312211";
+        //     case 7:
+        //         return "13112221";
+        //     case 8:
+        //         return "1113213211";
+        //     case 9:
+        //         return "31131211131221";
+        //     case 10:
+        //         return "13211311123113112211";
+        //     case 11:
+        //         return "11131221133112132113212221";
+        //     case 12:
+        //         return "3113112221232112111312211312113211";
+        //     case 13:
+        //         return "1321132132111213122112311311222113111221131221";
+        //     case 14:
+        //         return "11131221131211131231121113112221121321132132211331222113112211";
+        //     case 15:
+        //         return "311311222113111231131112132112311321322112111312211312111322212311322113212221";
+        //      ....
+        //     return "";
+        // }
+        //}
 }
 //leetcode submit region end(Prohibit modification and deletion)

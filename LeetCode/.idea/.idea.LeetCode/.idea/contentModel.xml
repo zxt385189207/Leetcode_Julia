@@ -13,62 +13,7 @@
     <e p="D:\TD_ET\Leetcode\Leetcode" t="IncludeFlat">
       <e p="Leetcode" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Common" t="Include" />
         <e p="Core" t="Include">
-          <e p="13罗马数字转整数" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="14最长公共前缀" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="20有效的括号" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="21合并两个有序链表" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="27移除元素" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="28实现strStr()" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="35搜索插入的位置" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="38外观数列" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="3无重复字符的最长子串" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="53最大子序和" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="58最后一个单词的长度" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="67二进制求和" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="69x的平方根" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="70爬楼梯" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="7整数反转" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="82删除排序链表中的重复元素2" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="83删除排序链表中的重复元素" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
-          <e p="9回文数" t="Include">
-            <e p="Algorithms.cs" t="Include" />
-          </e>
           <e p="自收集1找出最后一个不重复的字符" t="Include">
             <e p="Algorithms.cs" t="Include" />
           </e>
@@ -83,44 +28,6 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
-        <e p="初级算法" t="Include">
-          <e p="字符串" t="Include" />
-          <e p="数组" t="Include">
-            <e p="122买卖股票的最佳时机 II" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="136只出现一次的数字" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="189旋转数组" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="1两数之和" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="217存在重复元素" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="26删除排序数组中的重复项" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="283移动零" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="350两个数组的交集 II" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="36有效的数独" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="48旋转图像" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-            <e p="66加一" t="Include">
-              <e p="Algorithms.cs" t="Include" />
-            </e>
-          </e>
-        </e>
       </e>
       <e p="LeetCode.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
