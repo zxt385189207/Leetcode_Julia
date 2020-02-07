@@ -84,11 +84,11 @@ public class Solution {
             Stack<long> lowers = new Stack<long>(),
                 uppers         = new Stack<long>();
 
-            void Update(TreeNode root, long lower, long upper)
+            void Update(TreeNode root1, long lower1, long upper1)
             {
-                stack.Push(root);
-                lowers.Push(lower);
-                uppers.Push(upper);
+                stack.Push(root1);
+                lowers.Push(lower1);
+                uppers.Push(upper1);
             }
 
             long lower = long.MinValue, upper = long.MaxValue, val;

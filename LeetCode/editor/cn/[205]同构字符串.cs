@@ -27,8 +27,21 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
-    public bool IsIsomorphic(string s, string t) {
-        
+    // s中各字母首次出现下标的序列为: [0, 1, 0, 3, 4]， paper
+    // t中各字母首次出现下标的序列为: [0, 1, 0, 3, 4],  title
+    // 因为下标数组一致，所以两字符串同构。
+    public bool IsIsomorphic(string s, string t)
+    {
+        List<int> indexS = new List<int>();
+        List<int> indexT = new List<int>();
+
+        for (int i = 0; i < s.Length; i++)
+            indexS.Add(s.IndexOf(s[i]));
+
+        for (int j = 0; j < t.Length; j++)
+            indexT.Add(t.IndexOf(t[j]));
+
+        return indexS.SequenceEqual(indexT);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

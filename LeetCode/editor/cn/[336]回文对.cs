@@ -1,49 +1,22 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using Microsoft.VisualBasic;
-
-namespace LeetCode
-{
-    // public class TreeNode
-    // {
-    //     public int      val;
-    //     public TreeNode left;
-    //     public TreeNode right;
-    //
-    //     public TreeNode(int x)
-    //     {
-    //         val = x;
-    //     }
-    // }
-    public class Node
-    {
-        public int         val;
-        public IList<Node> children;
-
-        public Node()
-        {
-        }
-
-        public Node(int _val)
-        {
-            val = _val;
-        }
-
-        public Node(int _val, IList<Node> _children)
-        {
-            val      = _val;
-            children = _children;
-        }
-    }
+//给定一组唯一的单词， 找出所有不同 的索引对(i, j)，使得列表中的两个单词， words[i] + words[j] ，可拼接成回文串。 
+//
+// 示例 1: 
+//
+// 输入: ["abcd","dcba","lls","s","sssll"]
+//输出: [[0,1],[1,0],[3,2],[2,4]] 
+//解释: 可拼接成的回文串为 ["dcbaabcd","abcddcba","slls","llssssll"]
+// 
+//
+// 示例 2: 
+//
+// 输入: ["bat","tab","cat"]
+//输出: [[0,1],[1,0]] 
+//解释: 可拼接成的回文串为 ["battab","tabbat"] 
+// Related Topics 字典树 哈希表 字符串
 
 
-    public class Solution
-    {
+//leetcode submit region begin(Prohibit modification and deletion)
+public class Solution {
         public IList<IList<int>> PalindromePairs(string[] words)
         {
             IList<IList<int>> res  = new List<IList<int>>();
@@ -150,68 +123,5 @@ namespace LeetCode
             public List<int> words  = new List<int>();
             public List<int> suffix = new List<int>();
         }
-
-
-        class Program
-        {
-        }
-
-
-        static void Main(string[] args)
-        {
-            Program  p  = new Program();
-            string[] ss = new[] {"abc", "abbc", "a"};
-            int[]    ii = new[] {3, 3, 3};
-
-
-            //
-            //
-            // Solution s = new Solution();
-            //
-            // TreeNode a = new TreeNode(3);
-            // a.left        = new TreeNode(5);
-            // a.right       = new TreeNode(1);
-            // a.right.right = new TreeNode(0);
-            // a.right.right = new TreeNode(8);
-            //
-            //
-            // a.left.left  = new TreeNode(6);
-            // a.left.right = new TreeNode(2);
-            //
-            // a.left.right.left  = new TreeNode(7);
-            // a.left.right.right = new TreeNode(4);
-            //
-            // s.LowestCommonAncestor(a, a.left, a.right);
-            //
-            //Console.WriteLine(a.LengthOfLongestSubstring2("abcda"));
-            // int[] aa = new[] {-2,1,-3,4,-1,2,1,-5,4};
-            //
-
-            // ListNode b = new ListNode(1);
-            // a.RemoveNthFromEnd(b,1);
-
-
-            // Stopwatch stopwatch = new Stopwatch();
-            //
-            // List<Int32> list = new List<int>();
-            // for (int i = 0; i < 10000000; i++)
-            // {
-            //     list.Add(i);
-            // }
-            //
-            //
-            // stopwatch.Start(); //  开始监视代码运行时间
-            // list.Remove(8);
-            // stopwatch.Stop(); //  停止监视
-            //
-            // Console.WriteLine(stopwatch.Elapsed);
-            // stopwatch.Reset();
-            //
-            // stopwatch.Start(); //  开始监视代码运行时间
-            // list.Remove(9);
-            // stopwatch.Stop(); //  停止监视
-            //
-            // Console.WriteLine(stopwatch.Elapsed);
-        }
-    }
 }
+//leetcode submit region end(Prohibit modification and deletion)

@@ -92,7 +92,7 @@ public class Solution {
                 // 这个就是简单的规律，i是行标，j是列标。
                 // 行标决定一组block的起始位置（因为block为3行，所以除3取整得到组号，又因为每组block为3个，所以需要乘3），
                 // 列标再细分出是哪个block（因为block是3列，所以除3取整）
-                int k = i / 3 * 3 + j / 3;
+                int k = i / 3 * 3 + j / 3; // 这里不能进行约分, 因为i/3是C#里的算法, 1/3=0
                 //当前元素对应的行集合,列集合,宫集合,都不重复
                 if (!row[i].ContainsKey(board[i][j]) 
                     && !col[j].ContainsKey(board[i][j]) 

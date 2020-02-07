@@ -26,14 +26,12 @@
  * }
  */
 public class Solution {
-    /// <summary>
-    /// 栈, 迭代
-    /// </summary>
-    /// <param name="root"></param>
-    /// <returns></returns>
+
+    // 中序: 左子节点-> 根节点->右子节点
+    // 栈, 迭代
     public IList<int> InorderTraversal(TreeNode root)
     {
-        List<int>       res   =new List<int>();
+        List<int>       res   =n ew List<int>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode        curr  = root;
         while (curr != null || stack.Count != 0)
