@@ -19,12 +19,53 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
-    /// <summary>
-    /// 哈希表算法
-    /// </summary>
-    /// <param name="nums"></param>
-    /// <returns></returns>
-    public int MissingNumber(int[] nums)
+    // 鸽巢原理解法
+    public int MissingNumber(int[] nums) 
+    {
+        for (int i = 0; i < nums.Length; i++)
+        {
+            while (nums[i] < nums.Length && nums[nums[i]] != nums[i])
+            {
+                Swap(nums, nums[i], i);
+            }
+        }
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] != i)
+            {
+                return i;
+            }
+        }
+
+        return nums.Length;
+    }
+    // 在数组中使用异或运算交换两个变量的值的时候，
+    // 一定要保证这两个变量不是同一个变量，
+    // 即索引不能相同，否则会把这个位置上的数变成 0 。
+    public void Swap(int[] nums, int i, int j)
+    {
+        if (i == j)
+            return;
+        // 异或法
+        // 用异或运算交换变量，并且不能加快运算，也不能节省内存。
+        // nums[i] = nums[i] ^ nums[j]; // a ^ b = c
+        // nums[j] = nums[i] ^ nums[j]; //nums[j] =  a = c ^ b;
+        // nums[i] = nums[i] ^ nums[j]; //nums[i] =  b = c ^ a;
+                
+        // 加减法
+        nums[i] = nums[i] + nums[j]; // a = a + b
+        nums[j] = nums[i] - nums[j]; // b = a - b
+        nums[i] = nums[i] - nums[j]; // a = a - b
+                
+        // 临时变量
+        // int temp = nums[i];
+        // nums[i] = nums[j];
+        // nums[j] = temp;
+    }
+    
+    
+    // 哈希表算法
+    public int MissingNumber2(int[] nums)
     {
         HashSet<int> numSet = new HashSet<int>();
 
@@ -51,7 +92,7 @@ public class Solution {
     /// </summary>
     /// <param name="nums"></param>
     /// <returns></returns>
-    public int MissingNumber2(int[] nums)
+    public int MissingNumber3(int[] nums)
     {
         int missing = nums.Length;
         for (int i = 0; i < nums.Length; i++)

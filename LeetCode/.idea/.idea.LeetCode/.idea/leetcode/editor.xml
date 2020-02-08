@@ -691,6 +691,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[414]第三大的数.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[414]第三大的数.cs" />
+              <option name="questionId" value="414" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[41]缺失的第一个正数.cs">
           <value>
             <LeetcodeEditor>
@@ -736,6 +744,22 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[430]扁平化多级双向链表.cs" />
               <option name="questionId" value="766" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[442]数组中重复的数据.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[442]数组中重复的数据.cs" />
+              <option name="questionId" value="442" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[448]找到所有数组中消失的数字.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[448]找到所有数组中消失的数字.cs" />
+              <option name="questionId" value="448" />
             </LeetcodeEditor>
           </value>
         </entry>
