@@ -20,13 +20,66 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
-       // 为了能让算法的效率得到真正的提升，我们需要引入一个支持 插入，搜索，删除 操作的 动态 数据结构，
+    
+        // 暴力法
+        // 直接滑动窗口 超时
+        public bool ContainsNearbyAlmostDuplicate2(int[] nums, int k, int t)
+        {
+            for (int i = 0; i < nums.Length; ++i)
+            {
+                for (int j = Math.Max(i - k, 0); j < i; ++j)
+                {
+                    if (Math.Abs(nums[i] - nums[j]) <= t) 
+                        return true;
+                }
+            }
+
+            return false;
+        }
+    
+        // 查表+滑动窗口
+        // 较优
+        public bool ContainsNearbyAlmostDuplicate(int[] nums, int k, int t)
+        {
+            if (nums.Length <= 1)
+                return false;
+            // 因为测试用例有Int.MaxValue所以要用Long
+            HashSet<long> set = new HashSet<long>();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (t == 0)
+                {
+                    if (set.Contains(nums[i]))
+                        return true;
+                }
+                else
+                {
+                    foreach (var num in set)
+                    {
+                        if (Math.Abs(nums[i] - num) <= t)
+                            return true;
+                    }
+                }
+
+                set.Add(nums[i]);
+
+                if (set.Count>k)
+                    set.Remove(nums[i - k]);
+                        
+            }
+
+            return false;
+        }
+    
+        // SortedSet AVL树+滑动窗口
+        // 为了能让算法的效率得到真正的提升，我们需要引入一个支持 插入，搜索，删除 操作的 动态 数据结构，
         // 那就是自平衡二叉搜索树。
         // 自平衡 这个词的意思是，这个树在随机进行插入,删除操作之后，
         // 它会自动保证树的高度最小。
         // 为什么一棵树需要自平衡呢？
         // 这是因为在二叉搜索树上的大部分操作需要花费的时间跟这颗树的高度直接相关。
-        public bool ContainsNearbyAlmostDuplicate(int[] nums, int k, int t)
+        public bool ContainsNearbyAlmostDuplicate0(int[] nums, int k, int t)
         {
             if (t < 0)
             {
@@ -58,7 +111,7 @@ public class Solution {
             return false;
         }
         
-        // 桶排序
+        // 桶排序 + 滑动窗口
         // x: 值
         // w: 桶宽
         private long GetID(long x, long w)
@@ -120,21 +173,5 @@ public class Solution {
             return false;
         }
         
-        
-        // 暴力法,超时
-        // 滑动窗口
-        public bool ContainsNearbyAlmostDuplicate2(int[] nums, int k, int t)
-        {
-            for (int i = 0; i < nums.Length; ++i)
-            {
-                for (int j = Math.Max(i - k, 0); j < i; ++j)
-                {
-                    if (Math.Abs(nums[i] - nums[j]) <= t) 
-                        return true;
-                }
-            }
-
-            return false;
-        }
 }
 //leetcode submit region end(Prohibit modification and deletion)

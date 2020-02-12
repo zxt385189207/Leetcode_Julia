@@ -33,10 +33,8 @@ public class Solution {
         ListNode fast = dummy;
         ListNode slow = dummy;
 
-        for (int i = 0; i < n + 1; i++)
-        {
+        while (n-- >= 0)
             fast = fast.next;
-        }
 
         // 一起移动保持间距到最后
         while (fast != null)

@@ -33,12 +33,10 @@ public class Solution {
         public int LengthOfLongestSubstring(string s)
         {
             List<char> ls = new List<char>();
-            // 减少每次for循环判断的次数
-            int n = s.Length;
-
+            
             int intMaxLength = 0;
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < s.Length; i++)
             {
                 // 是否包含重复的字符
                 if (ls.Contains(s[i]))

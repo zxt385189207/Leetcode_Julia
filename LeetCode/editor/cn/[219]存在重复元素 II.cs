@@ -21,13 +21,11 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
     // 题目: 序号差绝对值不超过K
-
-
     // 哈希集,只需遍历一遍数组, set中最多只加入k个数, 如果重复就返回true
     public bool ContainsNearbyDuplicate(int[] nums, int k)
     {
         HashSet<int> set = new HashSet<int>();
-        for (int i = 0; i < nums.Length; ++i)
+        for (int i = 0; i < nums.Length; i++)
         {
             if (set.Contains(nums[i])) 
                 return true;

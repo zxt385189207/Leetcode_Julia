@@ -14,6 +14,44 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
+    
+    // 对撞指针
+    public int[] TwoSum(int[] nums, int target)
+    {
+        if (nums == null || nums.Length < 2)
+            return new int[0];
+                
+        int left  = 0;
+        int right = nums.Length - 1;
+
+        int[] temp = new int[nums.Length];
+                
+        // 但注意找到的下标并不是原数组的下标，需要复制一个原数组，然后再在原数组中查找到相同的元素
+        // 也可以用值元组对记录一下映射
+        List< (int, int)> list = new List<(int, int)>();
+        for (int i = 0; i < nums.Length; i++)
+            list.Add((nums[i], i));
+
+        list.Sort((x, y) => x.Item1.CompareTo(y.Item1));
+
+        while (left < right)
+        {
+            if (list[left].Item1 + list[right].Item1 < target)
+                left++;
+            else if (list[left].Item1 + list[right].Item1 > target)
+            {
+                right--;
+            }
+            else
+            {
+                return new[] {list[left].Item2, list[right].Item2};
+            }
+        }
+
+        return new[] {left, right};
+    }
+    
+    
     /// <summary>
     /// 优化解, 空间换时间
     /// </summary>

@@ -18,6 +18,7 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
+    // 对撞指针
     // 双指针判断回文串, 从字符串两头往中间遍历并进行比对，跳过非数字或字母项。
     public bool IsPalindrome(string s)
     {
@@ -28,7 +29,7 @@ public class Solution {
 
         int left  = 0;
         int right = s.Length - 1;
-        while (left <= right)
+        while (left < right)
         {
             var leftElement  = s[left];
             var rightElement = s[right];
@@ -37,25 +38,18 @@ public class Solution {
             {
                 // 如果 确认当前的比较和区域性无关的话，推荐使用ToUppperInvariant
                 if (char.ToUpperInvariant(leftElement) != char.ToUpperInvariant(rightElement))
-                {
                     return false;
-                }
 
                 left++;
                 right--;
             }
             //case2: 左指针指向的是字母或字符串
             else if (char.IsLetterOrDigit(leftElement))
-            {
                 right--;
-            }
             //case3: 右指针指向的是字母或字符串
             else
-            {
                 left++;
-            }
         }
-
         return true;
     }
 }

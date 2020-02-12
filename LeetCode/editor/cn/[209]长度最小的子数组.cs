@@ -22,11 +22,8 @@ public class Solution {
     // 直到当前窗口内的数字和小于了 s，回到第 1 步。
     public int MinSubArrayLen(int s, int[] nums)
     {
-        int n = nums.Length;
-        if (n == 0)
-        {
+        if (nums.Length < 1)
             return 0;
-        }
 
         int left  = 0;
         int right = 0;

@@ -123,6 +123,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[11]盛最多水的容器.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[11]盛最多水的容器.cs" />
+              <option name="questionId" value="11" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[121]买卖股票的最佳时机.cs">
           <value>
             <LeetcodeEditor>
@@ -144,6 +152,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[125]验证回文串.cs" />
               <option name="questionId" value="125" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[1290]二进制链表转整数.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[1290]二进制链表转整数.cs" />
+              <option name="questionId" value="1411" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -211,6 +227,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[149]直线上最多的点数.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[149]直线上最多的点数.cs" />
+              <option name="questionId" value="149" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[14]最长公共前缀.cs">
           <value>
             <LeetcodeEditor>
@@ -243,6 +267,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[15]三数之和.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[15]三数之和.cs" />
+              <option name="questionId" value="15" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[160]相交链表.cs">
           <value>
             <LeetcodeEditor>
@@ -272,6 +304,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[189]旋转数组.cs" />
               <option name="questionId" value="189" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[18]四数之和.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[18]四数之和.cs" />
+              <option name="questionId" value="18" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -363,6 +403,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[207]课程表.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[207]课程表.cs" />
+              <option name="questionId" value="207" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[208]实现 Trie (前缀树).cs">
           <value>
             <LeetcodeEditor>
@@ -400,6 +448,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[212]单词搜索 II.cs" />
               <option name="questionId" value="212" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[215]数组中的第K个最大元素.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[215]数组中的第K个最大元素.cs" />
+              <option name="questionId" value="215" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -480,6 +536,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[242]有效的字母异位词.cs" />
               <option name="questionId" value="242" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[24]两两交换链表中的节点.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[24]两两交换链表中的节点.cs" />
+              <option name="questionId" value="24" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -592,6 +656,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[344]反转字符串.cs" />
               <option name="questionId" value="344" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[345]反转字符串中的元音字母.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[345]反转字符串中的元音字母.cs" />
+              <option name="questionId" value="345" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -755,6 +827,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[447]回旋镖的数量.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[447]回旋镖的数量.cs" />
+              <option name="questionId" value="447" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[448]找到所有数组中消失的数字.cs">
           <value>
             <LeetcodeEditor>
@@ -768,6 +848,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[450]删除二叉搜索树中的节点.cs" />
               <option name="questionId" value="450" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[451]根据字符出现频率排序.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[451]根据字符出现频率排序.cs" />
+              <option name="questionId" value="451" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1099,6 +1187,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[75]颜色分类.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[75]颜色分类.cs" />
+              <option name="questionId" value="75" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[771]宝石与石头.cs">
           <value>
             <LeetcodeEditor>
@@ -1112,6 +1208,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[7]整数反转.cs" />
               <option name="questionId" value="7" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[80]删除排序数组中的重复项 II.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[80]删除排序数组中的重复项 II.cs" />
+              <option name="questionId" value="80" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1136,6 +1240,22 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[841]钥匙和房间.cs" />
               <option name="questionId" value="871" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[86]分隔链表.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[86]分隔链表.cs" />
+              <option name="questionId" value="86" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[876]链表的中间结点.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[876]链表的中间结点.cs" />
+              <option name="questionId" value="908" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1176,6 +1296,46 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[9]回文数.cs" />
               <option name="questionId" value="9" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[面试题18]删除链表的节点.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[面试题18]删除链表的节点.cs" />
+              <option name="questionId" value="100299" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[面试题22]链表中倒数第k个节点.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[面试题22]链表中倒数第k个节点.cs" />
+              <option name="questionId" value="100294" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[面试题24]反转链表.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[面试题24]反转链表.cs" />
+              <option name="questionId" value="100298" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[面试题35]复杂链表的复制.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[面试题35]复杂链表的复制.cs" />
+              <option name="questionId" value="100300" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[面试题52]两个链表的第一个公共节点.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[面试题52]两个链表的第一个公共节点.cs" />
+              <option name="questionId" value="100326" />
             </LeetcodeEditor>
           </value>
         </entry>

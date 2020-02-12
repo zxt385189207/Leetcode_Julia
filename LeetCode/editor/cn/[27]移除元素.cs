@@ -55,18 +55,17 @@ public class Solution {
     public int RemoveElement(int[] nums, int val)
     {
         // i代表慢指针
-        int i = 0;
+        int slow = 0;
         // j是遍历数组的快指针
-        for (int j = 0; j < nums.Length; j++)
+        for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[j] != val)
+            if (nums[i] != val)
             {
-                nums[i] = nums[j];
-                i++;
+                nums[slow++] = nums[i];
             }
         }
 
-        return i;
+        return slow;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -50,5 +50,28 @@ public class Solution {
 
         return new int[0];
     }
+    
+    // 对撞指针
+    // 前提升序数组
+    public int[] TwoSum2(int[] numbers, int target)
+    {
+        int right = numbers.Length - 1;
+        int left  = 0;
+
+        while (left < right)
+        {
+            // 首先判断首尾两项和是不是target
+            if (numbers[left] + numbers[right] == target)
+                return new []{left+1,right+1};
+            // 比target小,左边left指针++
+            if (numbers[left] + numbers[right] < target)
+                left++;
+            // 比target大,右边right指针--
+            else
+                right--;
+        }
+
+        return new int[]{};
+    }
 }
 //leetcode submit region end(Prohibit modification and deletion)

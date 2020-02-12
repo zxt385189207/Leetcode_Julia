@@ -27,13 +27,22 @@ public class Solution {
         // 合并之后最后一个数的index
         int p = m + n - 1;
 
+        // 数组最后一个数, 比较2个数组的最后一个值, 大的写入, 并且对应指针向左移动
+        while (p1 >= 0 && p2 >= 0)
+        {
+            // 语法糖形式
+            //nums1[p--] = nums1[p1] < nums2[p2] ? nums2[p2--] : nums1[p1--];
+            if (nums1[p1] < nums2[p2])
+                nums1[p--] = nums2[p2--];
+            else
+                nums1[p--] = nums1[p1--];
+        }
 
-        while ((p1 >= 0) && (p2 >= 0))
-            // 数组最后一个数, 比较2个数组的最后一个值, 大的写入, 并且对应指针向左移动
-            nums1[p--] = (nums1[p1] < nums2[p2]) ? nums2[p2--] : nums1[p1--];
-            
-        Array.Copy(nums2, 0, 
-            nums1, 0, p2 + 1);
+        // 循环结束后只有两种情况:p1= -1或者p2=-1
+        // p1=-1 数组2中可能还有0到p2+1个数未遍历
+        // p2=-1 数组2都已正确填充进数组1中,
+        if (p1 == -1)
+            Array.Copy(nums2, 0, nums1, 0, p2 + 1);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
