@@ -29,34 +29,51 @@ public class Solution
             }
         }
 
-        public ListNode Partition(ListNode head, int x)
+        // 证明过程在https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode/
+        // 结论: F=b
+        // F: 无环的那一段
+        // a: 进入环到快慢指针相遇的那一段
+        // b: 快慢指针相遇点到环入口的那一段
+        public ListNode DetectCycle(ListNode head)
         {
-            ListNode dunmmpyless = new ListNode(0);
-            ListNode less = dunmmpyless;
-            ListNode dunmmpygreater = new ListNode(0);
-            ListNode greater = dunmmpygreater;
-            
-            
-            while (head != null)
+            if (head == null)
             {
-                if (head.val < x)
-                {
-                    less.next = head;
-                    less = less.next;
-                }
-                else
-                {
-                    greater.next = head;
-                    greater = greater.next;
-                }
-
-                head = head.next;
+                return null;
             }
-            // 大的尾要设为null,不然会循环
-            greater.next = null;
-            // 连接小的尾和大的头
-            less.next = dunmmpygreater.next;
-            return dunmmpyless.next;
+
+            // 计算相遇点
+            ListNode intersect = getIntersect(head);
+            if (intersect == null)
+                return null;
+            
+
+            // 相遇点之后, 用2个指针,1个从头开始
+            // 1个从相遇点开始 一起走
+            // 再次相遇就是环的入口
+            ListNode ptr1 = head;
+            ListNode ptr2 = intersect;
+            while (ptr1 != ptr2)
+            {
+                ptr1 = ptr1.next;
+                ptr2 = ptr2.next;
+            }
+
+            return ptr1;
+        }
+
+        // 计算相遇点
+        public ListNode getIntersect(ListNode head)
+        {
+            ListNode slow = head;
+            ListNode fast = head;
+            while (fast != null && fast.next != null)
+            {
+                slow = slow.next;
+                fast = fast.next.next;
+                if (slow == fast)
+                    return slow;
+            }
+            return null;
         }
 
 
@@ -74,9 +91,10 @@ public class Solution
             //int[]     ii   = new[] {0,0,0,0};
             //List<int> list = new List<int>(ii);
             Console.WriteLine();
-            LinkedList<int> ll = new LinkedList<int>();
-            ll.AddLast(1);
-            ll.Clear();
+            ListNode a = new ListNode(1);
+            a.next      = new ListNode(2);
+            a.next.next = new ListNode(3);
+
 
             HashSet<(int, int, int)> set = new HashSet<(int, int, int)>();
             set.Add((1, 1, 1));

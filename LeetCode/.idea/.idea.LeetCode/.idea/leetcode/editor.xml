@@ -211,6 +211,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[143]重排链表.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[143]重排链表.cs" />
+              <option name="questionId" value="143" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[144]二叉树的前序遍历.cs">
           <value>
             <LeetcodeEditor>
@@ -224,6 +232,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[145]二叉树的后序遍历.cs" />
               <option name="questionId" value="145" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[147]对链表进行插入排序.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[147]对链表进行插入排序.cs" />
+              <option name="questionId" value="147" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -699,11 +715,27 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[369]给单链表加一.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[369]给单链表加一.cs" />
+              <option name="questionId" value="369" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[36]有效的数独.cs">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[36]有效的数独.cs" />
               <option name="questionId" value="36" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[379]电话目录管理系统.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[379]电话目录管理系统.cs" />
+              <option name="questionId" value="379" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -824,6 +856,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[442]数组中重复的数据.cs" />
               <option name="questionId" value="442" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[445]两数相加 II.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[445]两数相加 II.cs" />
+              <option name="questionId" value="445" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1272,6 +1312,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[8]字符串转换整数 (atoi).cs" />
               <option name="questionId" value="8" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[92]反转链表 II.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[92]反转链表 II.cs" />
+              <option name="questionId" value="92" />
             </LeetcodeEditor>
           </value>
         </entry>
