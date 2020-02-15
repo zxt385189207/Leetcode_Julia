@@ -16,84 +16,48 @@ namespace LeetCode
 
 public class Solution
 {
+    // 模拟出栈
+    public bool ValidateStackSequences(int[] pushed, int[] popped)
+    {
+        if (pushed.Length < 1)
+            return true;
+        Stack<int> stackPush = new Stack<int>();
+
+        int j = 0;
+        for (int i = 0; i < pushed.Length; i++)
+        {
+            stackPush.Push(pushed[i]);
+            // 1. 每push一个元素都与Popped数组第一个元素对比, 相等就出栈
+            // 2. 出栈之后索引自增
+            // 3. 循环结束条件: 栈内无元素 && 元素不相等 && popped遍历结束,
+            while (stackPush.Count != 0 && popped[j] == stackPush.Peek() && j < popped.Length)
+            {
+                stackPush.Pop();
+                j++;
+            }
+        }
+        // 如果栈内还有元素, 证明popped是不可能存在的序列
+        return stackPush.Count == 0;
+    }
+
+
     class Program
     {
-        public class ListNode
-        {
-            public int      val;
-            public ListNode next;
-
-            public ListNode(int x)
-            {
-                val = x;
-            }
-        }
-
-        // 证明过程在https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode/
-        // 结论: F=b
-        // F: 无环的那一段
-        // a: 进入环到快慢指针相遇的那一段
-        // b: 快慢指针相遇点到环入口的那一段
-        public ListNode DetectCycle(ListNode head)
-        {
-            if (head == null)
-            {
-                return null;
-            }
-
-            // 计算相遇点
-            ListNode intersect = getIntersect(head);
-            if (intersect == null)
-                return null;
-            
-
-            // 相遇点之后, 用2个指针,1个从头开始
-            // 1个从相遇点开始 一起走
-            // 再次相遇就是环的入口
-            ListNode ptr1 = head;
-            ListNode ptr2 = intersect;
-            while (ptr1 != ptr2)
-            {
-                ptr1 = ptr1.next;
-                ptr2 = ptr2.next;
-            }
-
-            return ptr1;
-        }
-
-        // 计算相遇点
-        public ListNode getIntersect(ListNode head)
-        {
-            ListNode slow = head;
-            ListNode fast = head;
-            while (fast != null && fast.next != null)
-            {
-                slow = slow.next;
-                fast = fast.next.next;
-                if (slow == fast)
-                    return slow;
-            }
-            return null;
-        }
-
-
         static void Main(string[] args)
         {
             Program  p  = new Program();
             string[] ss = new[] {"abc", "abbc", "a"};
-            int[][]  ii = new int[6][];
-            ii[0] = new[] {1, 1};
-            ii[1] = new[] {3, 2};
-            ii[2] = new[] {5, 3};
-            ii[3] = new[] {4, 1};
-            ii[4] = new[] {2, 3};
-            ii[5] = new[] {1, 4};
-            //int[]     ii   = new[] {0,0,0,0};
+            // int[][]  ii = new int[6][];
+            // ii[0] = new[] {1, 1};
+            // ii[1] = new[] {3, 2};
+            // ii[2] = new[] {5, 3};
+            // ii[3] = new[] {4, 1};
+            // ii[4] = new[] {2, 3};
+            // ii[5] = new[] {1, 4};
+            int[] ii  = new[] {4, 1, 2};
+            int[] ii2 = new[] {1, 3, 4, 2};
             //List<int> list = new List<int>(ii);
             Console.WriteLine();
-            ListNode a = new ListNode(1);
-            a.next      = new ListNode(2);
-            a.next.next = new ListNode(3);
 
 
             HashSet<(int, int, int)> set = new HashSet<(int, int, int)>();
@@ -108,6 +72,7 @@ public class Solution
             //
             // Console.WriteLine(list1.All(list2.Contains));
             //
+
             // set.Add(list1.ToArray());
             // set.Add(list1.ToArray());
 

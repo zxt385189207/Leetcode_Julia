@@ -29,65 +29,49 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-public class MyQueue
-{
- private Stack<int> s1;
- private Stack<int> s2;
- private int        front;
+    public class MyQueue 
+    {
+        Stack<int> stack1 = new Stack<int>();
+        // 用来保存反转的栈1元素
+        Stack<int> stack2 = new Stack<int>();
+        // 因为反转栈的栈顶就是最先进的元素, 需要记录栈1的最先进的元素
+        // 是否用front取决于栈2是否已经出完
+        private int front;
+        
+        public MyQueue() { }
+        
+        public void Push(int x)
+        {
+            if (stack1.Count==0)
+                front = x;
+            stack1.Push(x);
+        }
+        
+        public int Pop() 
+        {
+            // 如果反转栈中有元素就弹出
+            if (stack2.Count != 0)
+                return stack2.Pop();
+            // 栈1中不存在元素就返回-1
+            if (stack1.Count == 0)
+                return -1;
+            // 反转栈1中的元素,放入栈2实现先入先出
+            while (stack1.Count != 0)
+                stack2.Push(stack1.Pop());
+            return stack2.Pop();
+        }
 
- /** Initialize your data structure here. */
- public MyQueue()
- {
-  s1 = new Stack<int>();
-  s2 = new Stack<int>();
- }
-
- /** Push element x to the back of queue. */
- public void Push(int x)
- {
-  if (s1.Count == 0)
-  {
-   front = x;
-  }
-
-  s1.Push(x);
- }
-
- /** Removes the element from in front of queue and returns that element. */
- // 123
- public int Pop()
- {
-  // 栈2里有元素先出栈完,再倒置栈1
-  if (s2.Count==0)
-  {
-   // 如果栈1里面有元素, 就往栈2里塞, 这样栈2就是倒置的栈1
-   // 栈1就为空
-   while (s1.Count != 0)
-   {
-    s2.Push(s1.Pop());
-   } 
-  }
-            
-  return s2.Pop();
- }
-
- /** Get the front element. */
- public int Peek()
- {
-  if (s2.Count!=0)
-  {
-   return s2.Peek();
-  }
-
-  return front;
- }
-
- /** Returns whether the queue is empty. */
- public bool Empty()
- {
-  return s1.Count == 0 && s2.Count == 0;
- }
-}
+        public int Peek() 
+        {
+            // 如果反转栈中还有元素,就peek
+            if (stack2.Count!=0)
+                return stack2.Peek();
+            // 否则就出front
+            return front;
+        }
+        
+        public bool Empty() => stack1.Count == 0 && stack2.Count == 0;
+    }
 
 /**
  * Your MyQueue object will be instantiated and called as such:

@@ -21,62 +21,46 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 public class MyStack
 {
-    private Queue<int> q1;
-    private Queue<int> q2;
-    private int        top;
+    Queue<int>  queue1 = new Queue<int>();
+    Queue<int>  queue2 = new Queue<int>();
+    private int top    = 0;
 
-    /** Initialize your data structure here. */
     public MyStack()
     {
-        q1 = new Queue<int>();
-        q2 = new Queue<int>();
     }
 
-    /** Push element x onto stack. */
-    // q1 :   head 1 2 3  tail
     public void Push(int x)
     {
-        q1.Enqueue(x);
         top = x;
+        queue1.Enqueue(x);
     }
 
-    /** Removes the element on top of the stack and returns that element. */
-    // q2 : head 1 2 3  tail pop之后 1 2
     public int Pop()
     {
-        // 出队到只剩一个元素
-        while (q1.Count > 1)
-        {
-            // 倒数第二个
-            if (q1.Count == 2)
-            {
-                top = q1.Peek();
-            }
-            q2.Enqueue(q1.Dequeue());
-        }
+        if (queue2.Count != 0)
+            return queue2.Dequeue();
 
-        int val = q1.Dequeue();
+        if (queue1.Count == 0)
+            return -1;
 
-        // 交换q1 q2队列
-        Queue<int> temp = q1;
-        q1 = q2;
-        q2 = temp;
-        return val;
+        foreach (var val in queue1.Reverse())
+            queue2.Enqueue(val);
+        queue1.Clear();
+
+        return queue2.Dequeue();
     }
 
-    /** Get the top element. */
     public int Top()
     {
+        if (queue2.Count != 0)
+            return queue2.Peek();
+        if (queue1.Count == 0)
+            return -1;
         return top;
     }
 
-    /** Returns whether the stack is empty. */
-    public bool Empty()
-    {
-        return q1.Count == 0;
-    }
+    public bool Empty() => queue1.Count == 0 && queue2.Count == 0;
 }
-
 /**
  * Your MyStack object will be instantiated and called as such:
  * MyStack obj = new MyStack();

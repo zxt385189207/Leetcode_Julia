@@ -24,55 +24,42 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 public class MinStack
 {
- private Stack<Int32> stack;
- private Stack<Int32> minStack;
+   private Stack<Int32> stack;
+   private Stack<Int32> minStack;
 
- /** initialize your data structure here. */
- public MinStack()
- {
-  stack    = new Stack<Int32>();
-  minStack = new Stack<Int32>();
- }
-
- public void Push(int x)
- {
-  stack.Push(x);
-  if (!(minStack.Count == 0))
-  {
-   int top = minStack.Peek();
-   //小于的时候才入栈
-   if (x <= top)
+   /** initialize your data structure here. */
+   public MinStack()
    {
-    minStack.Push(x);
+      stack    = new Stack<Int32>();
+      minStack = new Stack<Int32>();
    }
-  }
-  else
-  {
-   minStack.Push(x);
-  }
- }
 
- public void Pop()
- {
-  int pop = stack.Pop();
+   public void Push(int x)
+   {
+     stack.Push(x);
+     if (minStack.Count != 0)
+     {
+      int top = minStack.Peek();
+      //当前元素小于最小栈栈顶元素的时候才入栈
+      if (x <= top)
+       minStack.Push(x);
+     }
+     else
+      minStack.Push(x);
+   }
 
-  int top = minStack.Peek();
-  //等于的时候再出栈
-  if (pop == top)
-  {
-   minStack.Pop();
-  }
- }
+   public void Pop()
+   {
+    int pop = stack.Pop();
+    int top = minStack.Peek();
+    //等于的时候再出栈
+    if (pop == top)
+     minStack.Pop();
+   }
 
- public int Top()
- {
-  return stack.Peek();
- }
+   public int Top() => stack.Peek();
 
- public int GetMin()
- {
-  return minStack.Peek();
- }
+   public int GetMin() => minStack.Peek();
 }
 
 /**
