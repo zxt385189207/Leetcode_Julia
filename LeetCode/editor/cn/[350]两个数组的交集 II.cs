@@ -30,7 +30,33 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
-    public int[] Intersect(int[] nums1, int[] nums2)
+    
+    // 字典
+    public int[] Intersect(int[] nums1, int[] nums2) {
+        Dictionary<int, int> dic  = new Dictionary<int, int>();
+        List<int>            list = new List<int>();
+        
+        for (int i = 0; i < nums1.Length; i++)
+        {
+            if (dic.ContainsKey(nums1[i]))
+                dic[nums1[i]]++;
+            else
+                dic[nums1[i]] = 1;
+        }
+
+        for (int i = 0; i < nums2.Length; i++)
+        {
+            if (dic.ContainsKey(nums2[i]) &&  dic[nums2[i]]>0)
+            {
+                dic[nums2[i]]--;
+                list.Add(nums2[i]);
+            }
+        }
+
+        return list.ToArray();
+    }
+    
+    public int[] Intersect2(int[] nums1, int[] nums2)
     {
         Array.Sort(nums1);
         Array.Sort(nums2);

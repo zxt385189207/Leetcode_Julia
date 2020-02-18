@@ -16,28 +16,19 @@ namespace LeetCode
 
 public class Solution
 {
-    // 模拟出栈
-    public bool ValidateStackSequences(int[] pushed, int[] popped)
+    
+    
+    
+    public class TreeNode
     {
-        if (pushed.Length < 1)
-            return true;
-        Stack<int> stackPush = new Stack<int>();
+        public int      val;
+        public TreeNode left;
+        public TreeNode right;
 
-        int j = 0;
-        for (int i = 0; i < pushed.Length; i++)
+        public TreeNode(int x)
         {
-            stackPush.Push(pushed[i]);
-            // 1. 每push一个元素都与Popped数组第一个元素对比, 相等就出栈
-            // 2. 出栈之后索引自增
-            // 3. 循环结束条件: 栈内无元素 && 元素不相等 && popped遍历结束,
-            while (stackPush.Count != 0 && popped[j] == stackPush.Peek() && j < popped.Length)
-            {
-                stackPush.Pop();
-                j++;
-            }
+            val = x;
         }
-        // 如果栈内还有元素, 证明popped是不可能存在的序列
-        return stackPush.Count == 0;
     }
 
 
@@ -46,7 +37,7 @@ public class Solution
         static void Main(string[] args)
         {
             Program  p  = new Program();
-            string[] ss = new[] {"abc", "abbc", "a"};
+            string[] ss = new[] {"hello"};
             // int[][]  ii = new int[6][];
             // ii[0] = new[] {1, 1};
             // ii[1] = new[] {3, 2};
@@ -58,13 +49,24 @@ public class Solution
             int[] ii2 = new[] {1, 3, 4, 2};
             //List<int> list = new List<int>(ii);
             Console.WriteLine();
+            TreeNode t = new TreeNode(1);
+            t.left        = new TreeNode(2);
+            t.left.right  = new TreeNode(4);
+            t.right       = new TreeNode(3);
+            t.right.right = new TreeNode(5);
+            Solution s = new Solution();
 
 
             HashSet<(int, int, int)> set = new HashSet<(int, int, int)>();
             set.Add((1, 1, 1));
             set.Add((1, 1, 1));
 
+            
+            int[] nums = new int[100];
 
+            // 50/32 = 1 右移5位
+            nums[50 >> 5] |= 1 << (50 & 0x1f);
+            
             // HashSet<IList<int>> set = new HashSet<IList<int>>();
             //
             // List<int> list1 = new List<int>{1,1,1};

@@ -83,6 +83,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[111]二叉树的最小深度.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[111]二叉树的最小深度.cs" />
+              <option name="questionId" value="111" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[112]路径总和.cs">
           <value>
             <LeetcodeEditor>
@@ -304,6 +312,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[167]两数之和 II - 输入有序数组.cs" />
               <option name="questionId" value="167" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[170]两数之和 III - 数据结构设计.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[170]两数之和 III - 数据结构设计.cs" />
+              <option name="questionId" value="170" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -563,6 +579,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[249]移位字符串分组.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[249]移位字符串分组.cs" />
+              <option name="questionId" value="249" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[24]两两交换链表中的节点.cs">
           <value>
             <LeetcodeEditor>
@@ -627,6 +651,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[288]单词的唯一缩写.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[288]单词的唯一缩写.cs" />
+              <option name="questionId" value="288" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[28]实现 strStr().cs">
           <value>
             <LeetcodeEditor>
@@ -683,6 +715,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[339]嵌套列表权重和.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[339]嵌套列表权重和.cs" />
+              <option name="questionId" value="339" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[344]反转字符串.cs">
           <value>
             <LeetcodeEditor>
@@ -728,6 +768,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[350]两个数组的交集 II.cs" />
               <option name="questionId" value="350" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[359]日志速率限制器.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[359]日志速率限制器.cs" />
+              <option name="questionId" value="359" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1051,6 +1099,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[582]杀死进程.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[582]杀死进程.cs" />
+              <option name="questionId" value="582" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[589]N叉树的前序遍历.cs">
           <value>
             <LeetcodeEditor>
@@ -1096,6 +1152,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[622]设计循环队列.cs" />
               <option name="questionId" value="860" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[641]设计循环双端队列.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[641]设计循环双端队列.cs" />
+              <option name="questionId" value="859" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1363,6 +1427,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[933]最近的请求次数.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[933]最近的请求次数.cs" />
+              <option name="questionId" value="969" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[94]二叉树的中序遍历.cs">
           <value>
             <LeetcodeEditor>
@@ -1376,6 +1448,22 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[98]验证二叉搜索树.cs" />
               <option name="questionId" value="98" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[993]二叉树的堂兄弟节点.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[993]二叉树的堂兄弟节点.cs" />
+              <option name="questionId" value="1035" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[994]腐烂的橘子.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[994]腐烂的橘子.cs" />
+              <option name="questionId" value="1036" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1440,6 +1528,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/editor/cn/[面试题31]栈的压入、弹出序列.cs" />
               <option name="questionId" value="100306" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[面试题32 - II]从上到下打印二叉树 II.cs">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[面试题32 - II]从上到下打印二叉树 II.cs" />
+              <option name="questionId" value="100312" />
             </LeetcodeEditor>
           </value>
         </entry>

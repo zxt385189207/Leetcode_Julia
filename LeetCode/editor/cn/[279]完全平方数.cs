@@ -38,8 +38,7 @@ public class Solution {
                 for (int j = 0; j < size; j++)
                 {
                     int cur = queue.Dequeue();
-                    // i * i + cur <= sqrt(n)
-                    // 下一层遍历的是 
+                    // i * i <= n - cur
                     for (int i = 1; i * i + cur <= n; i++)
                     {
                         int squre = i * i;
