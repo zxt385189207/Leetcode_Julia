@@ -75,8 +75,6 @@ public class Solution {
             // 一次性出队2个节点
             TreeNode t1 = queue.Dequeue();
             TreeNode t2 = queue.Dequeue();
-                
-            // 
             if (t1 == null && t2 == null) 
                 continue;
             // 其中有一个节点是null, 另一个不是null 则不是对称二叉树
@@ -85,14 +83,12 @@ public class Solution {
             // 值不同也不是对称二叉树
             if (t1.val != t2.val) 
                 return false;
-                
             // 根据镜像的顺序加入4个子节点,
             queue.Enqueue(t1.left);
             queue.Enqueue(t2.right);
             queue.Enqueue(t1.right);
             queue.Enqueue(t2.left);
         }
-
         return true;
     }
 }

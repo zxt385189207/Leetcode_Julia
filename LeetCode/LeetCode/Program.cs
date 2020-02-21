@@ -16,9 +16,28 @@ namespace LeetCode
 
 public class Solution
 {
-    
-    
-    
+    // 对于根 i 的不同二叉搜索树数量 F(i, n)F(i,n)，是左右子树个数的笛卡尔积
+    // F(3,7) =G(2)⋅G(4)。 以3为根,长度为7的序列, 个数=左*右,
+    // 当序列长度为 1 （只有根）或为 0 （空树）时，只有一种情况G[0]=G[1]=1
+    public int NumTrees(int n)
+    {
+        int[] G = new int[n + 1];
+        G[0] = 1;
+        G[1] = 1;
+
+        for (int i = 2; i <= n; ++i)
+        {
+            for (int j = 1; j <= i; ++j)
+            {
+                G[i] += G[j - 1] * G[i - j];
+            }
+        }
+        return G[n];
+    }
+
+
+
+
     public class TreeNode
     {
         public int      val;
@@ -50,23 +69,23 @@ public class Solution
             //List<int> list = new List<int>(ii);
             Console.WriteLine();
             TreeNode t = new TreeNode(1);
-            t.left        = new TreeNode(2);
-            t.left.right  = new TreeNode(4);
-            t.right       = new TreeNode(3);
-            t.right.right = new TreeNode(5);
+            t.left  = new TreeNode(1);
+            t.right = new TreeNode(2);
+
+
             Solution s = new Solution();
 
 
             HashSet<(int, int, int)> set = new HashSet<(int, int, int)>();
             set.Add((1, 1, 1));
             set.Add((1, 1, 1));
+            s.GenerateTrees(3);
 
-            
-            int[] nums = new int[100];
+            // Console.WriteLine(sizeof(byte));
+            // Console.WriteLine(sizeof(Boolean));
+            // Console.WriteLine(sizeof(int));
+            Console.ReadLine();
 
-            // 50/32 = 1 右移5位
-            nums[50 >> 5] |= 1 << (50 & 0x1f);
-            
             // HashSet<IList<int>> set = new HashSet<IList<int>>();
             //
             // List<int> list1 = new List<int>{1,1,1};

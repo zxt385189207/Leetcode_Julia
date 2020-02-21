@@ -1,23 +1,23 @@
-//给定一个二叉树，返回其按层次遍历的节点值。 （即逐层地，从左到右访问所有节点）。 
+//给定一个二叉树，返回其按层次遍历的节点值。 （即逐层地，从左到右访问所有节点）。
 //
-// 例如: 
-//给定二叉树: [3,9,20,null,null,15,7], 
+// 例如:
+//给定二叉树: [3,9,20,null,null,15,7],
 //
 //     3
 //   / \
 //  9  20
 //    /  \
 //   15   7
-// 
 //
-// 返回其层次遍历结果： 
+//
+// 返回其层次遍历结果：
 //
 // [
 //  [3],
 //  [9,20],
 //  [15,7]
 //]
-// 
+//
 // Related Topics 树 广度优先搜索
 
 
@@ -32,6 +32,7 @@
  * }
  */
 public class Solution {
+
 
         // 递归
         public IList<IList<int>> LevelOrder(TreeNode root)
@@ -61,7 +62,7 @@ public class Solution {
 
             return list;
         }
-        
+
         // 迭代
         public IList<IList<int>> LevelOrder2(TreeNode root)
         {

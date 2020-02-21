@@ -32,15 +32,11 @@ public class Solution {
     // BFS
     public int MinDepth(TreeNode root)
     {
-        if (root == null)
+        if(root==null)
             return 0;
-        Queue<TreeNode>           queue = new Queue<TreeNode>();
-        Dictionary<TreeNode, int> dic   = new Dictionary<TreeNode, int>();
-
-        int step = 0;
-
+        Queue<TreeNode> queue = new Queue<TreeNode>();
+        int             step  = 0;
         queue.Enqueue(root);
-
         while (queue.Count != 0)
         {
             step += 1;
@@ -50,15 +46,14 @@ public class Solution {
             {
                 TreeNode cur = queue.Dequeue();
                 if (cur.left == null && cur.right == null)
-                    dic[cur] = step;
-                if (cur.left != null)
+                    return step;
+                if (cur.left!=null)
                     queue.Enqueue(cur.left);
-                if (cur.right != null)
+                if (cur.right!=null)
                     queue.Enqueue(cur.right);
             }
         }
-
-        return dic.OrderBy(x => x.Value).First().Value;
+        return step;
     }
 
     // 递归

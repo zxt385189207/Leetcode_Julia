@@ -1,19 +1,19 @@
-//给定一个二叉树，找出其最大深度。 
+//给定一个二叉树，找出其最大深度。
 //
-// 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。 
+// 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
 //
-// 说明: 叶子节点是指没有子节点的节点。 
+// 说明: 叶子节点是指没有子节点的节点。
 //
-// 示例： 
-//给定二叉树 [3,9,20,null,null,15,7]， 
+// 示例：
+//给定二叉树 [3,9,20,null,null,15,7]，
 //
 //     3
 //   / \
 //  9  20
 //    /  \
-//   15   7 
+//   15   7
 //
-// 返回它的最大深度 3 。 
+// 返回它的最大深度 3 。
 // Related Topics 树 深度优先搜索
 
 
@@ -38,9 +38,7 @@ public class Solution {
         public int MaxDepth(TreeNode root)
         {
             if (root == null)
-            {
                 return 0;
-            }
 
             // 返回左子树的深度
             int leftHeight = MaxDepth(root.left);
@@ -62,9 +60,7 @@ public class Solution {
         public int MaxDepth2(TreeNode root)
         {
             if (root == null)
-            {
                 return 0;
-            }
 
             //BFS的层次遍历思想，记录二叉树的层数，
             //横向遍历完，层数即为最大深度
@@ -80,22 +76,15 @@ public class Solution {
                 int levelSize = queue.Count;
                 for (int i = 0; i < levelSize; i++)
                 {
-                    // 从左到右依次出队, 
+                    // 从左到右依次出队,
                     TreeNode node = queue.Dequeue();
                     if (node.left != null)
-                    {
-                        // 加入左子节点
                         queue.Enqueue(node.left);
-                    }
 
                     if (node.right != null)
-                    {
-                        // 加入右子节点
                         queue.Enqueue(node.right);
-                    }
                 }
             }
-
             return maxDepth;
         }
 

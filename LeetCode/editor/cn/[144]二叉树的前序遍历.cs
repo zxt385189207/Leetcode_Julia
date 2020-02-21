@@ -1,18 +1,18 @@
-//给定一个二叉树，返回它的 前序 遍历。 
+//给定一个二叉树，返回它的 前序 遍历。
 //
-// 示例: 
+// 示例:
 //
-// 输入: [1,null,2,3]  
+// 输入: [1,null,2,3]
 //   1
 //    \
 //     2
 //    /
-//   3 
+//   3
 //
 //输出: [1,2,3]
-// 
 //
-// 进阶: 递归算法很简单，你可以通过迭代算法完成吗？ 
+//
+// 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
 // Related Topics 栈 树
 
 
@@ -33,30 +33,21 @@ public class Solution {
     {
         Stack<TreeNode> stack = new Stack<TreeNode>();
         IList<int>      list  = new List<int>();
-            
-        if (root == null) 
-        {
+
+        if (root == null)
             return list;
-        }
-            
         stack.Push(root);
 
         while (stack.Count!=0)
         {
-            var node = stack.Pop();
-            list.Add(node.val);
+            TreeNode cur = stack.Pop();
+            list.Add(cur.val);
 
-            if (node.right!=null)
-            {
-                stack.Push(node.right);
-            }
-                
-            if (node.left!=null)
-            {
-                stack.Push(node.left);
-            }
+            if (cur.right!=null)
+                stack.Push(cur.right);
+            if (cur.left!=null)
+                stack.Push(cur.left);
         }
-
         return list;
     }
         
